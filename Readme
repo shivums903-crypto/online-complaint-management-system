@@ -1,0 +1,72 @@
+Online Complaint Management System
+A web-based application for submitting and managing complaints online. Users can log in, submit complaints, and view the complaints they have submitted. The system is intended to make complaint registration and tracking easier.
+Features
+- User login and session-based access
+- Submit a complaint with a title, category, and description
+- View complaints submitted by the logged-in user
+- Complaint categories such as Technical, Electrical, Water, and Other
+- PHP and MySQL-based application
+Technology Stack
+- Frontend: HTML, CSS (and JavaScript, if used in the project)
+- Backend: PHP
+- Database: MySQL / MariaDB
+- Local server: Apache through XAMPP
+- Editor: Visual Studio Code (recommended)
+Requirements
+- XAMPP
+- A web browser
+- A code editor (optional)
+Installation and Setup
+1. Install and open XAMPP.
+2. Start Apache and MySQL from the XAMPP Control Panel.
+3. Copy the project folder into XAMPP's htdocs directory. For example:
+   C:\xampp\htdocs\online-complaint-management-system
+4. Open phpMyAdmin:
+   http://localhost/phpmyadmin
+5. Create the database required by the project.
+6. Import the project's .sql database file if one is included. If no SQL file is present, create the required tables according to the SQL queries used by the PHP files.
+7. Check the database connection settings in the project's PHP connection/configuration file. Update the database host, username, password, and database name to match your local MySQL setup.
+8. Open the application in your browser. For the example folder name above:
+   http://localhost/online-complaint-management-system/
+How to Use
+1. Open the application in your browser.
+2. Log in with a valid user account.
+3. Open the complaint submission page.
+4. Enter the complaint title, choose a category, and provide a description.
+5. Submit the complaint.
+6. Open My Complaints to view complaints associated with your account.
+Project Structure
+The exact filenames may vary depending on the files in the repository. A typical PHP project structure may look like this:
+online-complaint-management-system/
+├── index.php
+├── login.php
+├── submit_complaint.php
+├── my_complaints.php
+├── logout.php
+├── config/
+│   └── database.php
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+└── database/
+    └── database.sql
+Database
+The application needs a MySQL database and tables that match the queries used by the PHP source files. Import the SQL file supplied with the project, if available. Do not assume the example folder names above are present in your copy; use the actual filenames in the repository.
+Troubleshooting
+- Apache or MySQL will not start: Check whether another application is already using ports 80 or 3306.
+- Database connection error: Verify the database name, username, password, and host in the PHP database configuration.
+- Page not found: Confirm that the project folder is inside xampp/htdocs and that the URL matches the folder name.
+- My Complaints shows a 404 error: Confirm that my_complaints.php exists in the expected location and that the link uses the correct filename and path.
+- Login/session problems: Confirm that the PHP pages call session_start() before using session variables and that the login process sets the expected user session value.
+Future Enhancements
+- Admin dashboard for reviewing and updating complaints
+- Complaint status tracking (for example, Pending, In Progress, and Resolved)
+- Search and filter complaints
+- Email or in-app notifications
+- Improved validation and security
+Author
+Shivu MS
+Repository
+Online Complaint Management System on GitHub
+Note: This README describes the project at a high level. Update the setup steps, database name, SQL import instructions, and project structure to match the exact source files committed to the repository.
